@@ -12,7 +12,7 @@ vector<vector<int>> levelOrder(TreeNode* root) {
                 q.pop();
                 if(node!= NULL)
                 {
-                    level.push_back(node->val);
+                   level[index] = node->val;
                     q.push(node->left);
                     q.push(node->right);
                 }
