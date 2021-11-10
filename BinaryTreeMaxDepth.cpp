@@ -5,6 +5,7 @@ int maxDepth(TreeNode* root) {
        } 
         queue<TreeNode*> q;
         q.push(root);
+        // Initialize depth with 0
         int depth = 0;
          while(!q.empty())
         {
@@ -23,6 +24,7 @@ int maxDepth(TreeNode* root) {
             }
             if(level.size()!=0)
             {
+                //After every level increase depth value
                 depth+=1;
             }
         }
