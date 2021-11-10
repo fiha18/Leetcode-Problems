@@ -1,3 +1,8 @@
+
+/*
+We are using it BFS for Minimum Depth because as soon as we get that any node is leaf node we have to return depth upto that.
+If we have used DFS then it will first run upto max depth then it will come back to other nodes, so waste of time.
+*/
 int minDepth(TreeNode* root) {
     if(root == NULL)
        {
