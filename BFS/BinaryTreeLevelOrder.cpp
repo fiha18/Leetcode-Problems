@@ -1,4 +1,5 @@
 vector<vector<int>> levelOrder(TreeNode* root) {
+        // Level Order Traversal of B Tree is BFS of B Tree
         vector<vector<int>> res;
         queue<TreeNode*> q;
         q.push(root);
