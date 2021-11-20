@@ -1,4 +1,6 @@
 vector<int> inorderTraversal(TreeNode* root) {
+        
+       // Inorder traversal of B tree is DFS Traversal of B Tree 
         vector<int> inOrder;
         // Empty Stack
         stack<TreeNode*> st;
