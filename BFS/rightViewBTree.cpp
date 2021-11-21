@@ -18,7 +18,7 @@ vector<int> leftView(Node *root)
            q.pop();
            // For Left View - if i = 1 i.e. first element in level order traversal at each level
            // For Right View - if i = qLen i.e. last element in level order traversal at each level
-           if(i==1)
+           if(i==qLen)
            {
                res.push_back(temp->data);
            }
