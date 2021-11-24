@@ -1,6 +1,9 @@
 /*
 Checking if a binary tree is symmetric or not.
 
+A Tree is Symmetric if Preorder of Left Sub Tree is equal to Postorder of Right Sub Tree
+
+
 Recursive Approach:
 
 Creating a recursive function isMirror that will recursively check if values are equal in mirror view.
