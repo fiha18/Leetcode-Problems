@@ -1,6 +1,6 @@
 /*
 Approach :
-    store frequency of elements in map 
+    store frequency of elements in lookup 
     then storing the frequency in multiset - it will be sorted automatically in the multiset
     comparing value in the multiset with k and decreasing value of k and removing element from multiset
     After if the value of k == 0 then break
@@ -8,12 +8,12 @@ Approach :
 
 
 Time Complexity - O(NlogN)
-Space Complexity - O(2N) - for map and multiset
+Space Complexity - O(2N) - for lookup and multiset
 
 */
 
 
-int findLeastNumOfUniqueInts(vector<int>& arr, int k) {map<int,int> m;
+int findLeastNumOfUniqueInts(vector<int>& arr, int k) {lookup<int,int> m;
         for(int i=0;i<arr.size();i++)
         {
             if(m.find(arr[i])!=m.end())
@@ -24,7 +24,7 @@ int findLeastNumOfUniqueInts(vector<int>& arr, int k) {map<int,int> m;
                 m[arr[i]]=1;
         }
         multiset<int> s;
-        map<int,int>::iterator itr;
+        lookup<int,int>::iterator itr;
         for(itr=m.begin();itr!=m.end();itr++)
         {
             s.insert(itr->second);
