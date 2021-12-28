@@ -9,6 +9,7 @@ void gameOfLife(vector<vector<int>>& board) {
             for(int j = 0; j< m ; j++)
             {
                 int cnt = 0;
+                // Checking if neighbour is live or not
                 if(  ((i - 1) >=0 && (i-1)<n) && board[i-1][j]%10 == 1)
                 {
                     cnt++;
@@ -41,7 +42,7 @@ void gameOfLife(vector<vector<int>>& board) {
                 {
                     cnt++;
                 }
-                
+                // updating the board value to keep track of live neighbours
                 int s = cnt*10 + board[i][j];
                 board[i][j] = s;
             }
@@ -50,8 +51,13 @@ void gameOfLife(vector<vector<int>>& board) {
         {
             for(int j = 0; j < m ; j++)
             {
+                // Here count is the no of live neighbours
                 int cnt = board[i][j]/10;
+                // Here val is the original value of the cell
                 int val = board[i][j]%10;
+
+                // Checking according to the condition provided and updating the cell with final value
+
                 if(val ==1 && cnt < 2)
                 {
                     board[i][j] = 0;
@@ -78,11 +84,7 @@ void gameOfLife(vector<vector<int>>& board) {
                     continue;
                 }
             }
-        }
-        
-        
-        
-        
+        }  
     }
 
 int main()
