@@ -19,12 +19,15 @@ class Solution {
                 storeDFS.push_back(node);
                 visited[node] = 1;
             }
-            for(auto ad : adj[node])
+            int adLen = adj[node].size();
+            for(int j = 0; j < adLen; j++)
             {
-                if(!visited[ad])
-                {
-                st.push(ad);
-                }
+               // Since Stack is LIFO so to get first element as First Out we have to store in Stack at last
+               int ad = adj[node][adLen - 1 -j];
+               if(!visited[ad])
+               {
+                   st.push(ad);
+               }
             }
         }
     }
@@ -50,7 +53,7 @@ class Solution {
         {
             if(!visited[i])
             {
-                dfsRecursive(i,V,adj,visited,storeDFS);
+                dfsIterative(i,V,adj,visited,storeDFS);
             }
         }
         return storeDFS;   
